@@ -18,5 +18,10 @@ export default new Vuex.Store({
   modules: {
     home,
     about
+  },
+  // 建立对于子模块的快捷访问
+  getters: {
+    homelist: state => state.home.homelist, // 建立home下的homelist属性的快捷访问
+    currenthome: state => state.home.currenthome
   }
 });
