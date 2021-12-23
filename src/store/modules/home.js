@@ -19,7 +19,7 @@ export default {
         async gethomelist(context) {
             // axios默认有一层data的数据结构
             const { data: { data: { channels } } } = await axios.get('http://api-toutiao-web.itheima.net/app/v1_0/channels')
-            // console.log(channels)
+            console.log(channels)
             // 需要通过mutation才能修改state的值
             context.commit('updateHome', channels)  // 更新数组
             context.commit('updateCurrentHome', channels[0].id)  // 更新当前选中分类id
