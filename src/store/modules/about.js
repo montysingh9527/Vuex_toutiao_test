@@ -15,9 +15,9 @@ export default {
     actions: {
         // 获取新闻列表数据 。分类id只能通过传递的方式传进来
         async getNewList(context, cataId) {
-            const { data: { data: { results } } } = await axios.get(`http://api-toutiao-web.itheima.net/app/v1_1/articles?channel_id=${cataId}&timestamp=${Date.now()}&with_top=1`)
+            const { data: { data: { results } } } = await axios.get(`http://api-toutiao-web.itheima.net/app/v1_1/articles?channel_id=${cataId}&timestamp=1556789000001&with_top=1`)
             context.commit('updateList', { currenthome: cataId, list: results })
-            console.log(results)
+            // console.log(results)
 
             // axios.get(`http://api-toutiao-web.itheima.net/app/v1_1/articles?channel_id=${cataId}&timestamp=${new Date().getTime()}&with_top=1`).then(res=>{
             //     console.log(res.data)

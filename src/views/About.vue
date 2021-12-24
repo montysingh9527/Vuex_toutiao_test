@@ -20,7 +20,7 @@
     </div>
   </div>
 </template>
-
+<script>
 import { mapGetters } from "vuex";
 export default {
   name: "about",
@@ -31,7 +31,7 @@ export default {
   watch: {
     // 监听当前选中分类id,触发获取新闻action
     currenthome:function(newValue) {
-      console.log('new',newValue)
+      // console.log('new',newValue)
       // newValue 是最新的激活分类id
       this.$store.dispatch("about/getNewList", newValue);
     },
